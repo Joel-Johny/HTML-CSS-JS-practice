@@ -1,0 +1,22 @@
+body{
+    background-color: royalblue;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    padding:2rem;
+    margin:2rem;
+}
+.box{
+    background-color: red;
+    height:100px;
+    width: 100px;
+    border:2px solid black
+}
+.changeColor{
+    background-color: white;
+}
+
+
+.defaultColor{
+    background-color: green;
+}
