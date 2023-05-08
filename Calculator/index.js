@@ -3,6 +3,8 @@ let minus = false;
 let multiply = false;
 let divide = false;
 let dot=true;
+
+
 function disable() {
   plus = false;
   minus = false;
@@ -18,6 +20,67 @@ function enable() {
   dot=true;
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') 
+      EQUAL();
+    if (event.key === 'Backspace') 
+      DEL();
+    if (event.key === 'Escape') 
+      AC();
+    if (event.key === '+') 
+      PLUS();
+    if (event.key === '-') 
+      MINUS();
+    if (event.key === '*') 
+      MUL();
+    if (event.key === '/') 
+      DIV();
+
+    if (event.key === '1') 
+      one();
+
+    if (event.key === '2') 
+      two();
+      
+    if (event.key === '3') 
+      three();
+      
+    if (event.key === '4') 
+      four();
+
+    if (event.key === '5') 
+      five();
+    
+    if (event.key === '6') 
+      six();
+
+    if (event.key === '7') 
+      seven();
+
+    if (event.key === '8') 
+      eight();
+
+    if (event.key === '9') 
+      nine();
+
+    if (event.key === '0') 
+      zero();
+    if (event.key === '.') 
+      DOT();
+  });
+  
+function EQUAL(){
+    let expression=document.getElementById("result").textContent
+    let answer=eval(expression)
+    let message=document.createElement("div")
+    message.style.fontSize='15px'
+    message.textContent="press Esc to clear"
+    document.getElementById("result").textContent=answer
+    document.getElementById("result").appendChild(message)
+
+    let table=document.getElementsByTagName(`table`)[0]
+    table.style.pointerEvents='none'
+}
 function PLUS() {
   if (plus) {
     let result = document.getElementById("result").textContent;
@@ -225,7 +288,8 @@ function DEL() {
 }
 
 function AC() {
-  let result = document.getElementById("result").textContent;
+    let table=document.getElementsByTagName(`table`)[0]
+    table.style.pointerEvents='auto'
   document.getElementById("result").textContent = "";
   disable()
 }
