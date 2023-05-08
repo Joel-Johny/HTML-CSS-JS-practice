@@ -14,29 +14,35 @@
             <input  type="text" name="fname" >
             
         </div>
-        <span>This is error text</span>
+        <span class="error error-fname"></span>
 
 
         <div>
             <label for="lname">Last Name</label>
-            <input id="lname" type="text">
+            <input id="lname" name="lname" type="text">
         </div>
+        <span class="error error-lname"></span>
+
 
         <div>
             <label for="email">Email</label>
-            <input id="email" type="email">
+            <input id="email" name="email" type="text">
         </div>
+        <span class="error error-email"></span>
+
         <div>
             <label for="contact">Contact</label>
-            <input id="contact" type="number">    
-
+            <input id="contact" type="text" name="contact">    
         </div>
+        <span class="error error-contact"></span>
         
 
       <div>
             <label>Date of Birth</label>
-            <input id="bday" type="date">
+            <input id="bday" type="date" name="dob">
       </div>
+      <span class="error error-dob"></span>
+
         
 
       <div>
@@ -46,9 +52,10 @@
             <label for="male">Male</label>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label>
-
         </div>
       </div>
+      <span class="error error-gender"></span>
+
 
       <div>
         <label for="hobbies">Hobbies</label>
@@ -69,6 +76,8 @@
             </div>
         </div>
       </div>
+      <span class="error error-hobby"></span>
+
 
       <div>
         <button type="submit" id="submit">Submit</button>
