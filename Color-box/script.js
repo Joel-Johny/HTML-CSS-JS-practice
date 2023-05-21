@@ -4,8 +4,28 @@ function handler(e){
         
         element.classList.add("defaultColor")
     })
-    e.target.classList.remove("defaultColor")
-    e.target.classList.add("changeColor")
+    const clicked=e.target.id
+    const even=[2,4,6]
+    const odd=[1,3,5,7]
+
+    if(clicked%2==0){
+        even.map((id)=>{
+            const element=document.getElementById(id)
+            element.classList.remove("defaultColor")
+            element.classList.add("changeColor")
+        })
+    }
+
+
+    else{
+        odd.map((id)=>{
+            const element=document.getElementById(id)
+            element.classList.remove("defaultColor")
+            element.classList.add("changeColor")
+
+        })
+
+    }
     //removing is necessary if you dont then default class will have more priority over change class
 }
 
