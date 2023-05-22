@@ -6,7 +6,7 @@ function error(className,error){
 let valid=true
 
 function validate(){
-let form=document.forms["details"]
+let form=document.getElementsByName("details")[0]
 let fname=form.fname.value
 let lname=form.lname.value
 let email=form.email.value
@@ -15,9 +15,8 @@ let dob=form.dob.value
 let yearNow=(new Date()).getFullYear()
 let diff=yearNow-dob.slice(0,4)
 let gender=form.gender
-let hobbies=form.hobbies
+let hobbies=Array.from(form.hobbies)
 let hobbycheck=false
-
 
 //validation for fname
 if(fname.length<=2)
